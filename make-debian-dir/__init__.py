@@ -113,8 +113,6 @@ class DebianConfiguration(object):
 
 
 def make_debian_dir():
-    try:
-        debconf = DebianConfiguration(os.getcwd())
-        debconf.render()
-
+    debconf = DebianConfiguration(os.getcwd())
+    debconf.render()
     print("'debian' directory successfully placed at the root of your repository")
