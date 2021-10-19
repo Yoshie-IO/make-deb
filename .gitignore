@@ -1,7 +1,7 @@
 # setuptools
 dist
 build
-make_deb.egg-info
+make_debian_dir.egg-info
 
 # virtualenv
 venv
