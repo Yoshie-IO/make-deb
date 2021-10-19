@@ -57,7 +57,7 @@ class DebianConfiguration(object):
         if not os.path.exists(setuppy_path):
             raise DebianConfigurationException("Failed to find setup.py")
         stdout = subprocess.Popen(
-            ["python", os.path.join(self.rootdir, "setup.py"),
+            ["python3", os.path.join(self.rootdir, "setup.py"),
              "--name", "--version", "--maintainer", "--maintainer-email",
              "--description"], stdout=subprocess.PIPE).communicate()
 
