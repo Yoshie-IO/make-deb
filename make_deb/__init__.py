@@ -108,3 +108,13 @@ class DebianConfiguration(object):
         trigger_filename = "%s.triggers" % self.context['name']
         with open(os.path.join(output_dir, trigger_filename), "w") as f:
             f.write(trigger_content+"\n")
+
+
+
+
+def make_debian_dir():
+    try:
+        debconf = DebianConfiguration(os.getcwd())
+        debconf.render()
+
+    print("'debian' directory successfully placed at the root of your repository")
